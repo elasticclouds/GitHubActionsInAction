@@ -44,5 +44,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: docker.io/ha20003660/sample-fast-api:${{ env.IMAGE_TAG }}
-          # tags: $REGISTRY/${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$IMAGE_TAG , $REGISTRY/${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:latest
+          tags: ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} , ${{ env.REGISTRY }}//${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
+          # tags: docker.io/ha20003660/sample-fast-api:${{ env.IMAGE_TAG }}
