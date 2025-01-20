@@ -1,8 +1,8 @@
 name: My First Workflow
 
-on: 
+on:
   push:
-    branches: 
+    branches:
       - main
   workflow_dispatch:
 
@@ -10,15 +10,21 @@ jobs:
   MyFirstJob:
     runs-on: ubuntu-latest
     steps:
-      - run : echo "Hello World"
-      
+      # This step prints "Hello World" to the console
+      - run: echo "Hello World"
+
+      # This step checks out the repository using the actions/checkout@v4.2.2 action
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
+      # This step lists all files in the repository and prints them to the console
       - name: List files in the repository
-        run : |
+        run: |
           echo "The repository ${{ github.repository }} contains the following files:"
           tree
-          
-        
-      
+
+      # This step installs JSDoc globally and generates documentation based on the jsdoc.json configuration file
+      - name: Generate Documentation
+        run: |
+          npm install -g jsdoc
+          jsdoc -c jsdoc.json
