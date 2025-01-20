@@ -15,6 +15,12 @@ uvicorn app.main:app
 ```
 
 ```
+pytest tests/
+
+pytest  --cov=app.main  tests/
+```
+
+```
 tags: docker.io/ha20003660/sample-fast-api:latest
 
 docker pull docker.io/ha20003660/sample-fast-api:latest
@@ -33,3 +39,4 @@ curl localhost:8080 | jq
 
 curl localhost:8080/operation/area/25 | jq
 ```
+

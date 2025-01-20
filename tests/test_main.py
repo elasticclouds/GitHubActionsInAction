@@ -5,6 +5,12 @@ from app.main  import app
 client = TestClient(app)
 
 
+def test_index():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert response.json() == {"status": "healthy"}
+    
+
 def test_info():
     response = client.get("/info")
     assert response.status_code == 200
@@ -12,7 +18,6 @@ def test_info():
     
 
 def test_operation_square():
-    
     len_in_mtr = 2 
     response = client.get(f"/operation/area/{len_in_mtr}")
     assert response.status_code == 200
