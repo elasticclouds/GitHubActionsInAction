@@ -45,4 +45,7 @@ jobs:
           context: .
           push: true
           tags: ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} , ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-          # tags: docker.io/ha20003660/sample-fast-api:${{ env.IMAGE_TAG }}
+          # tags: docker.io/ha20003660/sample-fast-api:latest
+          # docker pull docker.io/ha20003660/sample-fast-api:latest
+          # docker run -dp 8080:80 --rm  docker.io/ha20003660/sample-fast-api:latest
+
