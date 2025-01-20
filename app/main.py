@@ -5,6 +5,10 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
+@app.get("/")
+def index():
+    return {"status": "healthy"}
+
 @app.get("/info")
 def info():
     return {"name": "sample-fast-api", "version": "1.0.0"}
