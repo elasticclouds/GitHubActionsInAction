@@ -5,12 +5,9 @@ on:
     branches:
       - main
   workflow_dispatch:
-  # schedule:
-  #   # Runs at evert 5th minute of every hour
-  #   - cron: "*/5 * * * *"
 
 jobs:
-  MyFirstJob:
+  build:
     runs-on: ubuntu-latest
     steps:
       # This step prints "Hello World" to the console
