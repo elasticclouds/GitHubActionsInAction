@@ -23,4 +23,4 @@ ENV NAME sample-fast-api-docker
 LABEL maintainer="hariskumar <hariskumar@gmail.com>"
 
 # Run main.py when the container launches
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
