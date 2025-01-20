@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   schedule:
     # Runs at evert 5th minute of every hour
-    - cron: "5 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   MyFirstJob:
