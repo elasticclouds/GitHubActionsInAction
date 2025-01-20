@@ -44,5 +44,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: $REGISTRY/${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:latest
+          tags: $REGISTRY/${{ vars.DOCKERHUB_USERNAME }}/$IMAGE_NAME:latest
           # tags: $REGISTRY/${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$IMAGE_TAG , $REGISTRY/${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:latest
