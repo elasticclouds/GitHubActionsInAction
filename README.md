@@ -18,6 +18,8 @@ uvicorn app.main:app
 pytest tests/
 
 pytest  --cov=app.main  tests/
+
+pytest  --cov=app.main --cov-report=html  tests/
 ```
 
 ```
